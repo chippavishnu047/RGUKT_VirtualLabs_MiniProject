@@ -1,0 +1,10 @@
+{% extends home.html %}
+{% block content %}
+{% if messages %}
+{% for ms in messages %}
+<div class="alert alert-{{ms.tags}} m-2" id="msg" role="alert"> 
+{{ms}}
+</div>
+{% endfor %}
+{% endif %}
+{% endblock %}

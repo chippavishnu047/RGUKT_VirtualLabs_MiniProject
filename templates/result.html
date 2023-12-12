@@ -1,0 +1,33 @@
+{% extends 'dependencies.html' %}
+ 
+{% block content %}
+ 
+<div class="container " margin="auto">
+        
+    <div class="card-columns" style="padding: 10px; margin: 20px;">
+        <div class="card" align-items="centre" style="width: 32rem; border:3px black solid;justify-content:center">
+            <img class="card-img-top" src="http://kmit.in/emagazine/wp-content/uploads/2018/02/karnataka-results.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{name}}<br>
+                <h5>Marks: &nbsp; {{score}}</h5> 
+                <p class="card-text">Percentage: {{percent}}%</p>
+                <p class="card-text">Time Taken: {{time}} seconds</p>
+                <p class="card-text">Correct answers: {{correct}}</p>
+                <p class="card-text">Incorrect answers: {{wrong}}</p>
+                <p class="card-text">Total questions: {{total}}</p>
+                <h5>All the best for next quiz!</h5>
+                <!-- <button id="go-back">Go back! </button> -->
+                <a href="/"  ><button style="text-decoration: none;font-size:15px;border:none;padding:15px 32px;background-color:skyblue;">Back to home</button></a>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+<!-- <script>
+    document.getElementById("go-back").addEventListener("click",()=>{
+        history.back();
+        history.back();
+    });
+</script> -->
+ 
+{% endblock %}

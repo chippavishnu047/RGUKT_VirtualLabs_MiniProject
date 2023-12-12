@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Here!!!!!</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 25vw;
+    }
+
+    h1,
+    p {
+      text-align: center;
+    }
+
+    /* font family is added */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      font-family: sans-serif;
+      background: -webkit-linear-gradient(to right, #155799, #159957);
+      background: linear-gradient(to right, #155799, #159957);
+      color: whitesmoke;
+    }
+
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 25vw;
+    }
+
+    h1,
+    p {
+      text-align: center;
+    }
+
+    /* desired spacing for input fields */
+    input {
+      margin: 0.25em 0em 1em 0em;
+    }
+
+    /* more styles added to beautify the input fields */
+    input {
+      margin: 0.25em 0em 1em 0em;
+      outline: none;
+      padding: 0.5em;
+      border: none;
+      background-color: rgb(225, 225, 225);
+      border-radius: 0.25em;
+      color: black;
+    }
+
+    /* styles for button */
+    button {
+      padding: 0.75em;
+      border: none;
+      outline: none;
+      background-color: rgb(68, 18, 232);
+      color: white;
+      border-radius: 0.25em;
+    }
+
+    /* hover functionality for button */
+    button:hover {
+      cursor: pointer;
+      background-color: rgb(41, 4, 164);
+    }
+
+    form {
+      width: 35rem;
+      margin: auto;
+      color: whitesmoke;
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      background-color: rgba(11, 15, 13, 0.582);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.125);
+      padding: 20px 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Rajiv Gandhi University of Knowledge Technologies,basar</h1>
+  <form action="signup" method="POST">
+    {% csrf_token %}
+    <!-- class named "container" is assigned to div -->
+    <div class="container">
+      <h1>Register</h1>
+      <p>Kindly fill in this form to register.</p>
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter username" name="username" id="username" required />
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" id="email" required />
+
+      <label for="pass1"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="pass1" id="pass1" required />
+
+      <label for="pass2"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="pass2" id="pass2" required />
+
+      <button type="submit">Register</button>
+    </div>
+
+    <div>
+      <p>Already have an account? <a href="/signin" style="color:cyan">Log in</a>.</p>
+    </div>
+  </form>
+
+
+</body>
+
+</html>

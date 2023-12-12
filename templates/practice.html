@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Questions</title>
+
+</head>
+<body>
+    {% csrf_token %}
+   <div class="square">
+   {% for q in questions %}
+   <h3><b>{{q.id}}.{{q.name}} </b></h3>
+      <p>{{q.sip}}<br>
+      {{q.sop}}</p>
+      <a href="practice/coding"><button class="downloadButton" style="background-color: rgb(85, 172, 230);color:white;border:rgb(85, 172, 230);border-radius:10px;width:8%;height:50%">Practice</button></a>
+      {% endfor %}
+   </div>
+</body>
+</html>

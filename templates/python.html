@@ -1,0 +1,300 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* CSS for header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f5f5f5;
+
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #000;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #f5f5f5;
+      margin-right: 20px;
+
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #000;
+      padding: 35px 20px;
+      font-family: sans-serif;
+      font-weight: bold;
+    }
+
+    /* CSS for main element */
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 500px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), ;
+      /* background-image: url("{% static 'images/RGUKT-3.jpg' %}"); */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .intro h1 {
+      font-family: sans-serif;
+      font-size: 60px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .intro p {
+      font-size: 20px;
+      color: #d1d1d1;
+      text-transform: uppercase;
+      margin: 20px 0;
+    }
+
+    .intro button {
+      background-color: #5edaf0;
+      color: #000;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+    }
+
+    .achievements {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 80px;
+    }
+
+    .achievements .work {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .achievements .work i {
+      width: fit-content;
+      font-size: 50px;
+      color: #333333;
+      border-radius: 50%;
+      border: 2px solid #333333;
+      padding: 12px;
+    }
+
+    .achievements .work .work-heading {
+      font-size: 20px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .achievements .work .work-text {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 0;
+    }
+
+    .about-me {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 80px;
+      border-top: 2px solid #eeeeee;
+    }
+
+    .about-me img {
+      width: 500px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .about-me-text h2 {
+      font-size: 30px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .about-me-text p {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 0;
+    }
+
+    /* CSS for footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #302f49;
+      padding: 40px 80px;
+      /*height: 35vh;*/
+    }
+
+    .footer .copy {
+      color: #fff;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .bottom-links .links span {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .bottom-links .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 10px 20px;
+    }
+    .topic{
+        /*align-items: center;*/
+    font-size:20px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="/" class="logo">
+      <p style="color:brown;text-align:center">RGUKT VLabs,Basar</p>
+    </a>
+    <nav class="nav-items">
+      {% if user.is_authenticated %}
+      <h2 style="color:Brown">Hello,{{user.username}}</h2>
+      {% else %}
+      <h2 style="color:brown">Hello,RGUKT'ians</h2>
+      {% endif %}
+      {% if user.is_authenticated %}
+      <a href="/">Home</a>
+      <a href="/logout">Logout</a>
+      {% if user.is_staff %}
+      <a href="/admin/">Admin Panel</a>
+      {% endif %}
+      {% else %}
+      <a href="/">Home</a>
+      <a href="/signin">Signin</a>
+      <a href="/signup">SignUp</a>
+      {% endif %}
+
+    </nav>
+  </header>
+  <main>
+    {% if messages %}
+    {% for ms in messages %}
+    <div class="alert alert-{{ms.tags}} m-2" id="msg" role="alert"
+      style="background-color:rgb(105, 241, 117);text-align:center">
+      {{ms}}
+    </div>
+    {% endfor %}
+    {% endif %}
+    <div class="topic" >
+        <h2 style="color:rgb(180, 31, 31)">Python Lab</h2>
+	<h3 style="font-weight: bold;">List of available Topics</h3>
+	<ul>
+		<li><a href="python/week1">Week - I</a></li>
+		<li><a href="python/week1">Week - II</a></li>
+		<li><a href="python/week1">Week - III</a></li>
+		<li><a href="python/week1">Week - IV</a></li>
+		<li><a href="python/week1">Week - V</a></li>
+		<li><a href="python/week1">Week - VI</a></li>
+        
+	</ul>
+    
+      <div class="check" align-items="center" style="text-align: center;">
+        <a href="python/pquiz"><button class="downloadButton" style="background-color: rgb(85, 172, 230);color:white;border:rgb(85, 172, 230);border-radius:10px;width:12%">Attempt Quiz</button></a>
+        <a href="topic/practice"><button class="downloadButton" style="background-color: rgb(85, 172, 230);color:white;border:rgb(85, 172, 230);border-radius:10px;width:12%">Practice</button></a>
+        <!-- <a href="topic/coding"><button class="downloadButton" style="background-color: rgb(85, 172, 230);color:white;border:rgb(85, 172, 230);border-radius:10px;width:12%">Practice</button></a> -->
+      </div>
+      <br><br><br>
+    <!-- <button style="background-color: rgb(60, 60, 182);"><a href="quiz" class="btn btn-info" role="button" style="color: white;">Attempt Quiz</a></button> -->
+	<!--<h5>Data Structures topics</h5>
+	 <ol>
+		<li>Array</li>
+		<li>Linked List</li>
+		<li>Stacks</li>
+		<li>Queues</li>
+		<li>Trees</li>
+		<li>Graphs</li>
+	</ol> -->
+    </div>
+	
+  </main>
+  <footer class="footer">
+    <div class="copy">&copy; rgukt.ac.in</div>
+    <div class="bottom-links">
+      <div class="links">
+        <span>More Info</span>
+        <a href="/">Home</a>
+        <a href="https://www.rgukt.ac.in/">About</a>
+        <a href="https://www.rgukt.ac.in/contactus.html">Contact</a>
+      </div>
+      <div class="links">
+        <span>Social Links</span>
+        <a href="https://www.facebook.com/people/Rajiv-Gandhi-University-of-Knowledge-Technologies/100081653359582/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/rgukt-basar-41b210114/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/channel/UC_5eZQWA2Celmz2Plt-bKfA"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

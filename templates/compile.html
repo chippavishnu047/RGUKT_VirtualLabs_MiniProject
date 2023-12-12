@@ -1,0 +1,293 @@
+
+
+
+ <html>     
+   <head>
+      <style>
+         .square{
+            align-items: center;
+            justify-content: center;
+            padding-left: 13%;
+         }
+      </style> 
+      <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.css>
+      <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/transition.min.css>
+      <link rel=stylesheet href="https://www.online-ide.com/assets/bower_components/bootstrap/dist/css/bootstrap.min.css?ff=1&amp;wps=true">
+      <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css>
+      <link rel=stylesheet href="https://www.online-ide.com/assets/dist/css/ide.css?ff=1&amp;v=a11&amp;wps=true">
+      <link rel=stylesheet href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+      <script src=https://www.online-ide.com/assets/bower_components/jquery/dist/jquery.min.js></script><script src=https://www.online-ide.com/assets/bower_components/bootstrap/dist/js/bootstrap.min.js></script><script src="https://www.online-ide.com/assets/dist/js/ide.js?v=a7"></script><script src=https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.8/ace.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.8/ext-language_tools.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.8/ext-settings_menu.min.js></script><script async src=https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.8/ext-keybinding_menu.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/split.js/1.2.0/split.min.js></script>
+      <link href=https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css rel=stylesheet>
+
+      <script src=https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js></script><script async src=https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js></script>
+	  <script src=https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.js></script>
+	  <script src=https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/transition.min.js>
+	  </script><script>(function(h,o,t,j,a,r){h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};h._hjSettings={hjid:1767600,hjsv:6};a=o.getElementsByTagName('head')[0];r=o.createElement('script');r.async=1;r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;a.appendChild(r);})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');</script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-163453927-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+         gtag('js',new Date());gtag('config','UA-163453927-1');
+      </script>
+      <style id=ezoicCSS>.ezoic-at-0{float:none!important;margin-left:auto!important;margin-bottom:10px!important;text-align:center!important;margin-right:auto!important;max-width:100%!important;margin-top:10px!important;display:block!important;line-height:0;padding:0}.ezoic-ad.box-3101{min-width:160px;min-height:600px}.ezoic-ad.medrectangle-3104{min-height:90px;min-width:728px}.ezoic-ad.medrectangle-4105{min-width:728px;min-height:90px}.ezoic-ad.medrectangle-1107{min-width:970px;min-height:0!important;width:970px;margin-bottom:10px!important!important;display:flex!important;margin-top:10px!important!important;justify-content:space-between;background:0 0!important}.ezoic-ad.box-2102{min-width:160px;min-height:600px;margin-bottom:5px!important;margin-top:5px!important}.ezoic-ad.medrectangle-2100{line-height:0;padding:0;float:none!important;display:inline-block;min-width:728px;min-height:90px;max-width:100%!important}.ezoic-ad{display:inline-block;border:0}.ezoic-ad>div>iframe{margin:0!important;padding:0!important}.ezmob-footer{position:fixed;left:0;bottom:0;width:100%;background:#fff;z-index:100000;line-height:0}.ezmob-footer-desktop{background-color:#fffc;border-top:1px solid #d3d3d3;padding-top:5px}.ezmob-footer-close{cursor:pointer;color:#b2b2b2;border:1px solid #b2b2b2;border-radius:20px;background:#fff;line-height:20px;display:inline-block;font-size:20px;font-family:arial,sans-serif;padding:0 5px;position:absolute;top:5px;right:5px;height:24px;width:21px;text-align:center}body{padding-bottom:100px!important;height:auto}</style>
+      
+      <link rel="preload stylesheet" href="/ezvideo/ezvideojscss.css?cb=58" as=style>
+      <link rel=stylesheet href="/ezvideo/ezvideojspluginscss.css?cb=58">
+      <style>.video-container{overflow:hidden!important}.player-container{background:#1a1a1a!important;overflow:auto!important;width:900px!important;margin:0 0 20px!important}.ez-video-container{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;flex-wrap:wrap}@media screen and (min-width:100px){.ez-video-container.ez-stuck{position:fixed;bottom:120px;z-index:999;right:20px;width:75%;height:auto;transform:translateY(100%);animation:fade-in-up .25s ease forwards}}@media screen and (min-width:768px){.ez-video-container.ez-stuck{position:fixed;bottom:120px;z-index:999;right:20px;width:55%;height:auto;transform:translateY(100%);animation:fade-in-up .25s ease forwards}}@media screen and (min-width:1024px){.ez-video-container.ez-stuck{position:fixed;bottom:120px;z-index:999;right:20px;margin-bottom:20px;width:30%;height:auto;transform:translateY(100%);animation:fade-in-up .75s ease forwards}}.ez-video-container.ez-stuck.vertical{width:225px;height:400px;max-height:400px}.ez-video-container.ez-stuck.ez-float-left{right:auto;left:20px}.ez-video-container.ez-stuck.ez-float-center{right:auto;left:50%;margin-left:-130px}.ez-video-container.ez-stuck.ez-float-center.vertical{margin-left:-80px}.ez-video-ad-container{top:0;position:absolute;display:none;width:100%;height:100%}.ez-vad-controls{bottom:0;height:1.4em;position:absolute;overflow:hidden;display:none;opacity:1;background-color:#07141eb2;background:-moz-linear-gradient( bottom,rgba(7,20,30,.7) 0%,transparent 100%);background:-webkit-gradient( linear,left bottom,left top,color-stop(0%,rgba(7,20,30,.7)),color-stop(100%,transparent));background:-webkit-linear-gradient( bottom,rgba(7,20,30,.7) 0%,transparent 100%);background:-o-linear-gradient(bottom,rgba(7,20,30,.7) 0%,transparent 100%);background:-ms-linear-gradient(bottom,rgba(7,20,30,.7) 0%,transparent 100%);background:linear-gradient(to top,rgba(7,20,30,.7) 0%,transparent 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#0007141E',endColorstr='#07141E',GradientType=0 )}.ez-vad-controls.ez-vad-controls-showing{height:3.7em}.ez-vad-countdown{height:1em;color:#fff;text-shadow:0 0 .2em #000;cursor:default}.ez-vad-seek-bar{top:1.2em;height:.3em;position:absolute;background:#fff6}.ez-vad-progress{width:0;height:.3em;background-color:#ecc546}.ez-vad-play-pause,.ez-vad-mute,.ez-vad-slider,.ez-vad-fullscreen{width:2.33em;height:1.33em;top:.733em;left:0;position:absolute;color:#ccc;font-size:1.5em;line-height:2;text-align:center;font-family:VideoJS;cursor:pointer}.ez-vad-mute{left:auto;right:5.667em}.ez-vad-slider{left:auto;right:2.33em;width:3.33em;height:.667em;top:1.33em;background-color:#555}.ez-vad-slider-level{width:100%;height:.667em;background-color:#ecc546}.ez-vad-fullscreen{left:auto;right:0}.ez-vad-playing:before{content:"\00f103"}.ez-vad-paused:before{content:"\00f101"}.ez-vad-playing:hover:before,.ez-vad-paused:hover:before{text-shadow:0 0 1em #fff}.ez-vad-non-muted:before{content:"\00f107"}.ez-vad-muted:before{content:"\00f104"}.ez-vad-non-muted:hover:before,.ez-vad-muted:hover:before{text-shadow:0 0 1em #fff}.ez-vad-non-fullscreened:before{content:"\00f108"}.ez-vad-fullscreened:before{content:"\00f109"}.ez-vad-non-fullscreened:hover:before,.ez-vad-fullscreened:hover:before{text-shadow:0 0 1em #fff}.ez-video-wrap video{visibility:visible!important}.ez-wrap-float-only{height:0!important;width:0!important}.ez-playlist-float-only{display:none!important}.video-js .vjs-share__middle{padding:0!important;width:80%}.video-js{float:left!important;font-size:10px;color:#fff;position:relative!important;width:100%;height:auto;margin:0}@keyframes fade-in-up{0%{opacity:0}100%{transform:translateY(0);opacity:1}}.floating-placeholder{background-color:#000;display:block}.floating-placeholder-sizer{width:100%;padding-bottom:56.25%}.ez-video-wrap{text-align:center;clear:both}.vjs-playlist{height:114px}.ez-video-link{margin-top:0;margin-bottom:0;margin-left:20px;margin-right:0;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block!important;text-align:left;max-width:90vw}</style>
+      <link rel=stylesheet href="/ezvideo/ezvideocss.css?cb=58">
+      <script>let ezInstream={"prebidBidders":[{"bidder":"pubmatic","params":{"adSlot":"Ezoic_default_video","publisherId":"156983"}},{"bidder":"openx","params":{"delDomain":"ezoic-d.openx.net","unit":"558604040"}}],"apsSlot":{"slotID":"","divID":"","slotName":"","sizes":null},"breaks":[{"key":"ez-3998$djHJOZWiIbu$0$online_ide_com-preroll-1","timeOffset":"start","timeOffsetSeconds":0,"breakType":"linear","breakID":"online_ide_com-preroll-1","impressionCnt":1,"impressionId":9076344401073269,"bidFloorType":0,"bidRetries":5,"paramGen":"DefaultWide","params":{"min":4500,"max":240000,"skip":true,"vad":"linear","ad_type":"video","ad_sizes":"400x300|640x480|640x360|300x168"},"positionGen":"Even","bidFloorGen":"defaultVideoAdBidFloor","positionID":3998,"multiplier":3,"prebidParams":{"api":[2],"context":"instream","h":480,"linearity":1,"maxduration":240,"mimes":["video/mp4","application/javascript"],"minduration":4,"placement":1,"playbackmethod":[2,1,3,4,5,6],"playerSize":[640,480],"protocols":[2,3,5,6],"skip":1,"skippable":true,"startdelay":0,"w":640},"vastURL":"https://pubads.g.doubleclick.net/gampad/ads?correlator=2434128342\u0026description_url=https%3A%2F%2Fwww.online-ide.com%2F\u0026env=vp\u0026gdfp_req=1\u0026output=xml_vast4\u0026sz=400x300%7C640x480%7C640x360%7C300x168\u0026unviewed_position_start=1\u0026url=https%3A%2F%2Fwww.online-ide.com%2F\u0026ad_type=video\u0026hl=en\u0026impl=s\u0026max_ad_duration=240000\u0026min_ad_duration=4500\u0026npa=0\u0026tfcd=0\u0026vad_type=linear\u0026vpmute=1\u0026vpos=preroll\u0026iu=/1254144,22108676293/336810-shared-video-1\u0026vid_d=100\u0026vid_kw=Web-based+IDE%2COnline+IDE%2CCloud+IDE%2CCollaborative+coding+platform%2CWeb+development+environment%2CCode+editor+online%2CCode+collaboration+tool%2CCode+sharing+platform%2CProgramming+language+practice+platform%2CWeb+development+IDE\u0026vid_t=Web-based+IDE\u0026vpa=auto\u0026cust_params=ap%3D1%26d%3D336810%26eb_br%3D43aa1607a0c08c74b14a9039e7b909b4%26ft%3D0%26ic%3D1%26iid1%3D9076344401073269%26plat%3D1%26t%3D134%26tap%3D336810-shared-video-1-9076344401073269","videoAdBidFloor":2.2,"videoAdBidHash":"43aa1607a0c08c74b14a9039e7b909b4","videoFallbackType":"exponential","videoFallbackFloors":[1.4,1,0.7,0.5,0.36],"videoFallbackHashes":["af063c244089b52ec5a0423a258f1f8e","a495ce7dbb4cefcd3e0a722048894f41","527e52c10635ac8136a4c84094ee49a8","3ba982fc4238dd4197b1d51b345478dc","8c5ffefb122f59a66a8b7672d4452af2"]}]};if(typeof __ezInstream!=="undefined"&&typeof __ezInstream.breaks!=="undefined"){__ezInstream.breaks=__ezInstream.breaks.concat(ezInstream.breaks);}else{window.__ezInstream=ezInstream;}</script><script>window.ezVideo={"appendFloatAfterAd":false,"language":"en","titleString":"","titleOption":"","autoEnableCaptions":true}</script><script>var ezouid="1";</script>
+      <base href=https://www.online-ide.com/>
+      <script>var ezoTemplate='pub_site';if(typeof ezouid=='undefined')
+         {var ezouid='none';}
+         var ezoFormfactor='1';var ezo_elements_to_check=Array();
+      </script><script data-ezscrex=false>var soc_app_id='0';var did=336810;var ezdomain='online-ide.com';var ezoicSearchable=1;</script><script data-ezscrex=false data-pagespeed-no-defer data-cfasync=false>function create_ezolpl(pvID,rv){var d=new Date();d.setTime(d.getTime()+(365*24*60*60*1000));var expires="expires="+d.toUTCString();__ez.ck.setByCat("ezux_lpl_336810="+new Date().getTime()+"|"+pvID+"|"+rv+"; "+expires,3);}
+         function attach_ezolpl(pvID,rv){if(document.readyState==="complete"){create_ezolpl(pvID,rv);}
+         if(window.attachEvent){window.attachEvent("onload",create_ezolpl,pvID,rv);}else{if(window.onload){var curronload=window.onload;var newonload=function(evt){curronload(evt);create_ezolpl(pvID,rv);};window.onload=newonload;}else{window.onload=create_ezolpl.bind(null,pvID,rv);}}}
+         __ez.queue.addFunc("attach_ezolpl","attach_ezolpl",["c373d7c6-195c-42ee-4913-c828f89a5341","false"],false,['/detroitchicago/boise.js'],true,false,false,false);
+      </script><script>var _audins_dom="online_ide_com",_audins_did=336810;__ez.queue.addFile('/detroitchicago/cmbv2.js','/detroitchicago/cmbv2.js?gcb=195-0&cb=04-3y02-8y06-13y07-2y1d-7y0b-6y0d-23y17-4y1b-5y20-4y23-5y25-3y26-4y27-9y28-58y2b-131y2f-139y33-4y3a-12y3b-6y5d-2y61-22&cmbcb=141&sj=x04x02x06x07x1dx0bx0dx17x1bx20x23x25x26x27x28x2bx2fx33x3ax3bx5dx61',true,[],true,false,true,false);</script><script defer>__ez.queue.addFile('/detroitchicago/cmbdv2.js','/detroitchicago/cmbdv2.js?gcb=195-0&cb=03-8y0c-6y1c-5y62-22&cmbcb=141&sj=x03x0cx1cx62',true,['/detroitchicago/cmbv2.js'],true,false,true,false);</script>
+   </head>
+   <body>
+   {% csrf_token %}
+  
+
+	
+      <div class="main-content d-flex ">
+         <div class=container id=container>
+            <div id=header-control>
+               <div class=btn-group><button type=button class="btn btn-default btn-custom" id=open_file onclick=openFile(dispFile) data-toggle=tooltip data-container=body data-placement=right title="Open File from Disk"><i class="fas fa-folder-open"></i></button>
+                  <button type=button class="btn btn-default btn-custom" onclick=save_code_modal() id=save_file data-toggle=tooltip data-container=body data-placement=right title="Save File to Disk - F9"><i class="fas fa-save"></i></button>
+                  <button type=button class="btn btn-default btn-custom" onclick=share_code_modal() data-toggle=tooltip data-container=body data-placement=right title="Share Code - F10"><i class="fas fa-share-alt"></i></button>
+               </div>
+               <div class="btn-group setting-btn" role=group><button type=button class="btn btn-default" id=toggle-theme data-toggle=tooltip data-container=body data-placement=left title="Change Theme"><i class="fas fa-moon fa-lg"></i></button>
+                  <button type=button class="btn btn-default" onclick=about_modal() id=info data-toggle=tooltip data-container=body data-placement=left title="About Site"><i class="fas fa-info-circle"></i></button>
+                  <button type=button class="btn btn-default" onclick=ace_setting() id=setting data-toggle=tooltip data-container=body data-placement=left title=Settings><i class="fas fa-cogs"></i></button>
+               </div>
+               <div class="ui fluid selection dropdown" id=lang-select data-toggle=popover data-trigger=manual data-placement=left data-content="Select the programming language">
+                  <i class="dropdown icon"></i>
+                  <div class="default text">Language</div>
+                  <div class=menu>
+                     <div class=item data-value=c><img class="ui mini image" alt=C src=https://www.online-ide.com/assets/images/languages/c.svg>C</div>
+                     <div class=item data-value=cpp><img class="ui mini image" alt=C++ src=https://www.online-ide.com/assets/images/languages/cpp.svg>C++</div>
+                     <div class=item data-value=python3><img class="ui mini image" alt=Python3 src=https://www.online-ide.com/assets/images/languages/python.svg>Python 3</div>
+                     <div class=item data-value=java><img class="ui mini image" alt=Java src=https://www.online-ide.com/assets/images/languages/java.svg>Java</div>
+                     <div class=item data-value=php><img class="ui mini image" alt=php src=https://www.online-ide.com/assets/images/languages/php.svg>PHP</div>
+                     <div class=item data-value=ruby><img class="ui mini image" alt=Ruby src=https://www.online-ide.com/assets/images/languages/ruby.svg>Ruby</div>
+                     <div class=item data-value=rlang><img class="ui mini image" alt=R src=https://www.online-ide.com/assets/images/languages/rlang.svg>R</div>
+                     <div class=item data-value=golang><img class="ui mini image" alt=Go-Lang src=https://www.online-ide.com/assets/images/languages/go.svg>Go Lang</div>
+                     <div class=item data-value=bash><img class="ui mini image" alt=Bash src=https://www.online-ide.com/assets/images/languages/bash.svg>Bash</div>
+                  </div>
+               </div>
+            </div>
+            <div id=mi class=split>
+               <div id=editor-main>
+                  <ul class="nav nav-tabs" role=tablist>
+                     <li class=active id=editor-1><a data-toggle=tab>main.py</a>
+                     <li id=new_file_btn><button type=button class="btn btn-default btn-sm add-editor" id=create_tab data-title="New File"><i class="fas fa-plus"></i></button>
+                  </ul>
+                  <div id=editor></div>
+                  <div class=boxed id=editor_footer></div>
+               </div>
+               <div class=control-bar>
+                  <div id=control-btn><button type=button class="btn btn-success btn-sm" id=run-btn onclick=run_python() data-toggle=popover data-placement=bottom data-trigger=hover data-content=F8><i class="fa fa-play"></i> <strong>Run</strong></button></div>
+                  <a tabindex=0 type=button class="btn btn-default btn-sm" id=share-btn onclick=share_code_modal() data-toggle=popover data-placement=right data-trigger=hover data-content="Share the code to your friends and colleagues"><i class="fa fa-share"></i> <strong>Share</strong></a>
+                  <input class=textbox id=input_arguments placeholder="Command Line Arguments">
+               </div>
+            </div>
+            <div id=d class=split>
+               <div class=boxed1 id=output_header>
+                  <div id=hint-section></div>
+                  <div class="btn-group status" id=tool-btn><button type=button data-toggle=tooltip data-container=body data-placement=right title="Copy to Clipboard" class="btn btn-default btn-sm status" onclick=copy_output()><i class="fas fa-copy"></i></button>
+                     <button type=button data-toggle=tooltip data-container=body data-placement=right title=Download class="btn btn-default btn-sm status" onclick=download_modal()><i class="fas fa-download"></i></button>
+                     <button type=button data-toggle=tooltip data-container=body data-placement=right title=Clear class="btn btn-default btn-sm status" onclick=clear_output()><i class="fas fa-eraser"></i></button>
+                  </div>
+                  <button type=button data-toggle=tooltip data-container=body data-placement=right title=Expand/Collapse class="btn btn-default btn-sm status" id=term-expand onclick=term_expand()><i class="fas fa-expand-alt fa-lg"></i></button>
+                   
+                  <div id=output-status></div>
+               </div>
+               <div id=terminal>
+                  <div id=progress-status></div>
+                  <div class=boxed2 id=output>
+                     <div class=wrapper id=wrap></div>
+                     <form id=term-form><input id=term-input autocomplete=off></form>
+                  </div>
+               </div>
+            </div>                
+         
+      </div>
+      <div class="modal fade" tabindex=-1 role=dialog id=downloadResult>
+         <div class=modal-dialog role=document>
+            <div class=modal-content>
+               <div class=modal-header>
+                  <button type=button class=close data-dismiss=modal aria-label=Close><span aria-hidden=true>×</span></button>
+                  <h3 class=modal-title>Download Result</h3>
+               </div>
+               <div class=modal-body>
+                  <form>
+                     <div class=form-group><label for=name>File Name:</label>
+                        <input class=form-control id=download_file_name value=main_output.txt>
+                     </div>
+                  </form>
+               </div>
+               <div class=modal-footer><button type=button class="btn btn-default" data-dismiss=modal>Close</button>
+                  <button class="btn btn-primary" onclick=download_output() data-dismiss=modal>Download</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" tabindex=-1 role=dialog id=closeEditorTab>
+         <div class=modal-dialog role=document>
+            <div class=modal-content>
+               <div class=modal-header>
+                  <button type=button class=close data-dismiss=modal aria-label=Close><span aria-hidden=true>×</span></button>
+                  <h3 class=modal-title id=close_file_title>Close File</h3>
+               </div>
+               <div class=modal-body>
+                  <p>Your changes will be lost. Are you sure you want to Close the file ?
+               </div>
+               <div class=modal-footer><button type=button class="btn btn-default" data-dismiss=modal>No</button>
+                  <button class="btn btn-primary" onclick=close_editor_tab() data-dismiss=modal>Yes</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" tabindex=-1 role=dialog id=saveEditorTab>
+         <div class=modal-dialog role=document>
+            <div class=modal-content>
+               <div class=modal-header>
+                  <button type=button class=close data-dismiss=modal aria-label=Close><span aria-hidden=true>×</span></button>
+                  <h3 class=modal-title id=save_file_title>Save</h3>
+               </div>
+               <div class=modal-body>
+                  <p>Do you want to save the file ?
+                  <form>
+                     <div class=form-group><label for=name>File Name:</label>
+                        <input class=form-control id=code_file_name value=main.py>
+                     </div>
+                  </form>
+               </div>
+               <div class=modal-footer><button type=button class="btn btn-default" data-dismiss=modal>No</button>
+                  <button class="btn btn-primary" onclick=download_code() data-dismiss=modal>Yes</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" tabindex=-1 role=dialog id=shareModal>
+         <div class=modal-dialog role=document id=share-dialog>
+            <div class=modal-content id=share-content>
+               <div class=modal-header>
+                  <button type=button class=close data-dismiss=modal aria-label=Close><span aria-hidden=true>×</span></button>
+                  <h3 class=modal-title id=share_code>Share the Code</h3>
+               </div>
+               <div class=modal-body>
+                  <form>
+                     <div class=form-group>
+                        <label for=name>Expiry Period:</label>
+                        <select class=form-control id=expiry_select>
+                           <option value=1>24 hour
+                           <option value=30>1 month
+                           <option selected value=180>6 month
+                           <option value=-1>Never
+                        </select>
+                     </div>
+                  </form>
+                  <br><button class="btn btn-primary" onclick=share_code() data-dismiss=modal id=share-btn-modal>Share</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" tabindex=-1 role=dialog id=shareModalAfter>
+         <div class=modal-dialog role=document id=share-dialog-after>
+            <div class=modal-content id=share-content-after>
+               <div class=modal-header>
+                  <button type=button class=close data-dismiss=modal aria-label=Close><span aria-hidden=true>×</span></button>
+                  <h3 class=modal-title id=share_code>Share the Code</h3>
+               </div>
+               <div class=modal-body>
+                  <form>
+                     <div class=form-group><label for=name>URL:</label><span id=share-copy onclick=copy_share_url()><i class="far fa-copy"></i></span>
+                        <input class=form-control id=share_url_box value=http://localhost:8888/onlineide/code/HoiJqp9nQT readonly>
+                     </div>
+                  </form>
+                  <div class=addthis_inline_share_toolbox_7qby id=addthis_share_modal></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class=modal tabindex=-1 role=dialog id=aboutSiteModal>
+         <div class=modal-dialog role=document>
+            <div class=modal-content>
+               <div class=modal-header>
+                  <button type=button class=close data-dismiss=modal aria-label=Close><span aria-hidden=true>×</span></button>
+                  <h2 class=modal-title><strong>About online-ide.com</strong></h2>
+               </div>
+               <div class="modal-body abountModalBody">
+                  <p>Online IDE is a web-based tool powered by <a href=https://ace.c9.io/ target=_blank>ACE</a> code editor. This tool can be used to learn, build, run, test your program. You can open the code from your local and continue to build using this IDE. Code and the output can be downloaded.
+                  <h3><strong>Keyboard Shortcuts</strong></h3>
+                  <ul style=font-size:larger>
+                     <li>Run Code - F8
+                     <li>Share Code - F9
+                     <li>Save Code - F10
+                     <li>Open Editor Command Palette - F1
+                  </ul>
+                  <h3><strong>Report a bug</strong></h3>
+                  <p>If you encounter a bug or have questions or suggestions for improvements, please report it via feedback.
+                  <h3><strong>Data policy</strong></h3>
+                  <p>No data is saved in the server. The code is sent to the server for execution and will be cleared after completion. Shared Code will be saved in the server till the selected expiry period.
+               </div>
+               <div class=modal-footer>
+                  <p> Copyright © 2020 online-ide.com</p>
+                  <button class="btn btn-default" data-dismiss=modal>Close</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script>ace.require("ace/ext/language_tools");var editor=ace.edit("editor");ace.require('ace/ext/settings_menu').init(editor);var editor_cnt=1,editor_index=1,active_editor=1,editor_session=[];var request,init_ts,open_file_name;var lang="python3";default_content=get_script(lang);var prev_result='in';var site_url="https://www.online-ide.com/"
+         var base_url="https://www.online-ide.com/"
+         var share_url=base_url;var exe_cnt=0;var addthis_share={url:share_url,}
+         var isMobile=window.orientation>-1;toastr.options={"closeButton":true,"debug":false,"newestOnTop":true,"positionClass":"toast-top-right","preventDuplicates":true,"preventOpenDuplicates":true,"maxOpened":1,"onclick":null,"showDuration":"100","hideDuration":"1000","timeOut":"3000","extendedTimeOut":"1000","showEasing":"swing","hideEasing":"linear",};var instance=Split(['#mi','#d'],{direction:'vertical',sizes:[66,28],gutterSize:5,cursor:'row-resize',minSize:[0,180],onDrag:function(){editor.resize();},});function term_expand(){var element=document.getElementById('term-expand').innerHTML;if(element==='<i class="fas fa-expand-alt fa-lg"></i>'){instance.setSizes([0,94]);editor.resize();document.getElementById('term-expand').innerHTML='<i class="fas fa-compress-alt fa-lg"></i>'}else{instance.setSizes([66,28]);editor.resize();document.getElementById('term-expand').innerHTML='<i class="fas fa-expand-alt fa-lg"></i>'}
+         $('#term-expand').blur();$('[data-toggle="tooltip"]').tooltip('hide');}
+         editor.setOptions({enableBasicAutocompletion:true,enableLiveAutocompletion:true,enableSnippets:true,showPrintMargin:false,fixedWidthGutter:true,autoScrollEditorIntoView:true,copyWithEmptySelection:true,highlightActiveLine:false,});editor.setTheme("ace/theme/textmate");editor.container.style.lineHeight=1.5;editor_session[0]=ace.createEditSession(default_content,"ace/mode/python");editor.setSession(editor_session[0]);var active_editor_id=$('#editor-1').children('a');var active_file_name='main.py';var repl_host=get_host();var command_list=[];var command_index=0;var cur_cmd;var hint_glow;var y=document.getElementById('editor_footer');var output=document.getElementById('output');var exec_detail=document.getElementById('output-status');var progress_status=document.getElementById('progress-status');$(function(){$('[data-toggle="tooltip"]').tooltip({delay:{show:750,hide:50}})});$(function(){$('[data-toggle="popover"]').popover({delay:{"show":0,hide:0}})});$('.popover-dismiss').popover({trigger:'hover'});editor.session.setMode("ace/mode/"+get_mode(lang));$('#lang-select').dropdown('set selected',lang);document.getElementById('editor-1').innerHTML='<a data-toggle="tab">'+get_scriptname(lang)+'</a>';$('#lang-select').dropdown('setting','onChange',function(value){lang=value;editor.session.setMode("ace/mode/"+get_mode(lang));$("#lang-select").popover('hide');document.getElementById('editor-1').innerHTML='<a data-toggle="tab">'+get_scriptname(lang)+'</a>';if(editor_session[0].getValue()===default_content){default_content=get_script(lang);editor_session[0].setValue(default_content);editor.focus();editor.navigateFileEnd();}});$(".nav-tabs").on("click","a",function(e){e.preventDefault();detail_chk=(e.detail===undefined)?1:e.detail;if(!$(this).hasClass('add-editor')&&!$(this).children('input').hasClass('thVal')&&detail_chk==1){active_editor=parseInt($(this).parent().attr('id').split('-')[1]);active_editor_id=$(this);editor.setSession(editor_session[active_editor-1]);active_file_name=$(this).html();$(this).tab('show');editor.focus();update_editor_footer();}}).on("click","span",function(){close_tab=$(this).parent();close_tab.children('a').click();$('#close_file_title').text('Close - '+active_file_name);if(editor.getValue()===""){close_editor_tab();}
+         else{$("#closeEditorTab").modal('show');}});$('#rename_file').click(function(e){e.stopPropagation();e.preventDefault();active_editor_id.dblclick();});let theme=localStorage.getItem('theme')!==undefined?localStorage.getItem('theme'):'light'
+         if(theme==='dark'){$('body').addClass('dark');document.getElementById('toggle-theme').innerHTML='<i class="fas fa-sun fa-lg"></i>';editor.setTheme("ace/theme/tomorrow_night_bright");}
+         $('#toggle-theme').click(function(e){document.body.classList.toggle('dark');if($('body').hasClass("dark")){editor.setTheme("ace/theme/tomorrow_night_bright");document.getElementById('toggle-theme').innerHTML='<i class="fas fa-sun fa-lg"></i>';localStorage.setItem('theme','dark');}else{editor.setTheme("ace/theme/textmate");document.getElementById('toggle-theme').innerHTML='<i class="fas fa-moon fa-lg"></i>';localStorage.setItem('theme','light');}
+         $('#toggle-theme').blur();$('[data-toggle="tooltip"]').tooltip('hide');});$('.add-editor').click(function(e){e.stopPropagation();e.preventDefault();editor_cnt+=1;editor_index+=1;var id=editor_cnt;active_editor=id;editor_session[active_editor-1]=ace.createEditSession('',"ace/mode/"+get_mode(lang));editor.setSession(editor_session[active_editor-1]);$(this).closest('li').before('<li id="editor-'+id+'"><a data-toggle="tab">Untitled'+id+'</a> <span> <i class="fa fa-times"></i></span></li>');active_editor_id=$(".nav-tabs li").children('a').last();active_editor_id.tab('show');active_editor_id.dblclick();update_editor_footer();editor.selection.on('changeCursor',function(e){update_editor_footer();});editor.selection.on('changeSelection',function(e){update_editor_footer();});});$(document).on('dblclick','.nav-tabs > li > a',function(event){if($(event.target).attr('class')!="thVal")
+         {event.stopPropagation();event.preventDefault();var currentEle=$(this);var value=$(this).html();if(value.search('<input')===-1)updateVal(currentEle,value);}});editor.focus();editor.navigateFileEnd();update_editor_footer();editor.selection.on('changeCursor',function(e){update_editor_footer();});editor.selection.on('changeSelection',function(e){update_editor_footer();});$('.status button').attr('disabled','disabled');$('#stop-btn').attr('disabled','disabled');socket_options={transports:["websocket"],'timeout':3000,'connect timeout':3000,'reconnection':true,'reconnectionDelay':1000,'reconnectionDelayMax':5000,'reconnectionAttempts':5};$(document).keyup(function(e){IsCtrl=false;IsShift=false;}).keydown(function(e){if(e.which==17){IsCtrl=true;}
+         if(e.which==16){IsShift=true;}
+         switch(e.which){case 119:run_python();e.preventDefault();break;case 120:share_code_modal();e.preventDefault();break;case 121:save_code_modal();e.preventDefault();break;}});$('#output').on('click',function(){$('#term-input').focus();});window.onbeforeunload=goodbye;
+      </script><script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e908e7d111adc12"></script></div>
+      
+      <script>let ezVideoIframe=false;function renderEzoicVideoContent(){let videoObjects=[{"PlayerId":"ez-3998","VideoContentId":"djHJOZWiIbu","VideoPlaylistSelectionId":0,"VideoPlaylistId":0,"VideoTitle":"Web-based IDE","VideoDescription":"Web-based IDE, A web-based integrated development environment (IDE) is an online platform that allows programmers to write, edit, and test their code directly in a web browser. It offers a full-fledged programming environment that includes features like code highlighting, auto-complete, debugging, and testing tools. Web-based IDEs offer several benefits over traditional desktop-based IDEs, such as easy accessibility, collaborative capabilities, and scalability. They are particularly useful for remote teams, freelancers, and students who may not have access to powerful local machines or the resources to set up a local development environment.\n\nSome popular web-based IDEs include Visual Studio Code Online, CodeSandbox, Repl.it, and Gitpod. These platforms support multiple programming languages and frameworks, making it easy for developers to work on diverse projects without having to switch between different tools. Web-based IDEs also provide integrations with popular version control systems like Git, making it easier to manage code changes and collaborate with team members.\n\nOverall, web-based IDEs offer a convenient and efficient way for developers to work on coding projects from anywhere, anytime, without compromising on features or functionality. With the increasing adoption of cloud-based technologies and remote work practices, web-based IDEs are becoming an essential tool for modern software development teams.","VideoChapters":{"Chapters":null,"StartTimes":null,"EndTimes":null},"VideoLinksSrc":"https://video-meta.humix.com/link/djHJOZWiIbu.vtt","Captions":null,"VideoDurationMs":100033,"DeviceTypeFlag":0,"FloatFlag":1,"FloatOptionFlag":1,"IsAutoPlay":true,"IsLoop":false,"ShouldConsiderDocVisibility":false,"ShouldPauseAds":false,"AdUnit":"336810-shared-video-1","ImpressionId":9076344401073269,"VideoStartTime":0,"IsStartTimeEnabled":0,"IsKeyMoment":false,"PublisherVideoContentShare":{"DomainIdOwner":271138,"DomainIdShare":336810,"DomainNameOwner":"monibe.com","IsEzoicOwnedVideo":false,"IsOutstream":false},"VideoUploadSource":"","IsVertical":false,"IsPreferred":false,"ShowControls":false,"IsSharedEmbed":false,"ShortenId":"","Preview":false,"VAbTest":"","VAbTestVal":"","VideoPlaylist":null,"VideoPlaceholderId":3998,"URL":"https://www.online-ide.com/","Width":640,"MaxWidth":"","Height":360,"PreviewURL":"https://www.online-ide.com/ezoimgfmt/streaming.humix.com/poster/oGSuQmaGTklPaWEn/oGSuQmaGTklPaWEn_j1682534387493-qt9d0g_t1682534472_base.003.jpg?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-1","VideoDisplayType":0,"MatchOption":0,"PlaceholderSelectionId":0,"HashValue":"","IsFloating":true,"AdsEnabled":1,"IsAutoSelect":true,"Keyword":"","VideoSelection":2,"VideoMatchScore":80,"VideoPlaceholderHash":"","IsAIPlaceholder":true}];if(typeof ezVideoPlayer==="undefined"){__ez.queue.addFile("/beardeddragon/wyvern.js",'/beardeddragon/wyvern.js?cb=58',true,[],false,true,true,false);__ez.queue.addFile("/beardeddragon/gilamonster.js",'/beardeddragon/gilamonster.js?cb=139',true,["/beardeddragon/wyvern.js"],false,true,true,false);__ez.queue.addFile("/beardeddragon/iguana.js",'/beardeddragon/iguana.js?cb=131',true,["/beardeddragon/wyvern.js"],false,true,true,false);__ez.queue.addFunc("ezoicVideoNonCmb","renderEzoicVideoContent",null,false,["/beardeddragon/iguana.js"],false,false,true,false);return;}
+         window.ezIntType="";for(vIndex=0;vIndex<videoObjects.length;vIndex++){let videoObject=videoObjects[vIndex];videoObject.videoObjectsCount=videoObjects.length;videoObject.videoObjectsIndex=vIndex+1;ezVideoPlayer.Init(videoObject);}}
+         __ez.queue.addFile("ima","//imasdk.googleapis.com/js/sdkloader/ima3.js",true,[],false,true,true,false);__ez.queue.addFunc("ezoicVideo","renderEzoicVideoContent",null,false,["ima","/detroitchicago/cmbv2.js"],false,false,true,false);
+      </script><script>var __inScopeForCCPA=false;function __uspapi(command,version,callback){var response=null;var successs=false;if(command==="getUSPData"&&version===1){var uspString="1";if(__inScopeForCCPA){uspString+="N";var result;var consentCookie=(result=new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie))?(result[1]):null;if(consentCookie==="nonconsent"){uspString+="Y";}
+         else{uspString+="N";}
+         uspString+="N"}
+         else{uspString+="---";}
+         response={uspString:uspString,version:1};success=true;}
+         return callback(response,success);};function __receiveUspapiMessage(event){if(event.data.hasOwnProperty('__uspapiCall')){__uspapi('getUSPData',1,function(uspData,success){event.source.postMessage({__uspapiReturn:{returnValue:uspData,success:success,callId:event.data.__uspapiCall.callId}},event.origin);});}
+         return null;};window.addEventListener("message",__receiveUspapiMessage,false);
+      </script><script async src="https://g.ezodn.com/cmp/v2/v.js?v=4"></script><script>(function(){if(typeof document.body==='undefined'||document.body===null){return;}
+         var attachEvent=function(element,evt,func){if(element.addEventListener){element.addEventListener(evt,func,false);}else{element.attachEvent("on"+evt,func);}};attachEvent(document.body,"ezVigImpression",function(e){if(typeof(_ezaq)!=="undefined"&&typeof e==="object"){__ez.pel.AddAndFire(e.slot,[(new __ezDotData(e.key,e.value))]);}});})();
+      </script><script>window.__ez_vig_close_wrapper=function(closeFunc,urlAddition){closeFunc();var vc={"enabled":false,"useVignetteLoader":true,"fireEventName":"ezVigImpression","impressionSource":"anchor","urlAddition":"utm_content=anc-true","disableFloor":true,"eventHandlerTest":false};if(typeof urlAddition=='string'){vc.urlAddition=urlAddition;}
+         var v=newEzVignette(vc);v.handleClick();};
+      </script><script data-ezscrex=false data-cfasync=false data-pagespeed-no-defer id=a6aa3ffb1f4e4ac9bf95518384b0e2f3>__cnxiid=873720306855257;__cnxau='online_ide_com-cnx-1';setTimeout(function(){!function(e){if(typeof(window.cnx)==='undefined'||!window.cnx){window.cnx={},window.cnx.cmd=[];var n=e.createElement('iframe');n.src='javascript:false';n.display='none',n.onload=function(){if(typeof(ezVideo)==='undefined'||!ezVideo){var e=n.contentWindow.document,t=e.createElement('script');t.src='https://cd.connatix.com/connatix.player.js?cid=5f049401-746e-4449-8c27-b6b9d8e25882';t.setAttribute('async','1');t.setAttribute('type','text/javascript');e.body.appendChild(t);}};e.head.appendChild(n);}}(document);(new Image).src='//capi.connatix.com/tr/si?token=dceed97a-951e-4c47-b565-c2794ffae817&cid=5f049401-746e-4449-8c27-b6b9d8e25882';cnx.cmd.push(function(){if(typeof(__ezcnxPlayer)==='undefined'||!__ezcnxPlayer){cnx({playerId:'dceed97a-951e-4c47-b565-c2794ffae817',}).render('a6aa3ffb1f4e4ac9bf95518384b0e2f3',(e,n)=>{__ezcnxPlayer=n;if(typeof(__ez_auto_adjust_outstream_float)==='undefined'){__ezcnxPlayerDelay=[];__ezcnxPlayerDelay.push('outstreamFloatDestroy');}else{window.__ez_outstream_float_destroy&&__ez_outstream_float_destroy();}
+         if(typeof(__ez_outstream_player_tracking)==='undefined'){if(typeof(__ezcnxPlayerDelay)==='undefined'){__ezcnxPlayerDelay=[];}
+         __ezcnxPlayerDelay.push('outstreamtracking');}else{__ez_outstream_player_tracking();}
+         let railToClose=(__ezcnxPlayer.getFloatingSettings()&&__ezcnxPlayer.getFloatingSettings().scrollPosition===1)?'left':'right';if(window.__ez_close_rail){if(__ezcnxPlayer.getPlayerType()!==0){__ezcnxPlayer.once('adImpression',function(e){window.__ez_close_rail&&__ez_close_rail('ez-sidebar-wall-'+railToClose);});}else if(__ezcnxPlayer.getFloatingSettings()){window.__ez_close_rail&&__ez_close_rail('ez-sidebar-wall-'+railToClose);}}});}});},3000);
+      </script><script>__ez.queue.addFile("pubmaticOpenwrapJS","https://ads.pubmatic.com/AdServer/js/pwt/162833/9311/pwt.js",true,[],true,false,true,true);var __ezPwtBidders=['yahoossp','sharethrough','onetag','yieldmo','pulsepoint','medianet','vidoomy','openx','criteo','pubmatic'];__ez.queue.addFunc("openwrapRequestAdUnits","openwrapRequestAdUnits",[[{code:"div-gpt-ad-online_ide_com-medrectangle-2-0",divId:"div-gpt-ad-online_ide_com-medrectangle-2-0",adUnitId:"/1254144,22108676293/online_ide_com-medrectangle-2",adUnitIndex:"0",mediaTypes:{banner:{sizes:[[728,90]]}}},{code:"div-gpt-ad-online_ide_com-box-3-0",divId:"div-gpt-ad-online_ide_com-box-3-0",adUnitId:"/1254144,22108676293/online_ide_com-box-3",adUnitIndex:"1",mediaTypes:{banner:{sizes:[[160,600]]}}},{code:"div-gpt-ad-online_ide_com-box-2-0",divId:"div-gpt-ad-online_ide_com-box-2-0",adUnitId:"/1254144,22108676293/online_ide_com-box-2",adUnitIndex:"2",mediaTypes:{banner:{sizes:[[160,600]]}}},{code:"div-gpt-ad-online_ide_com-medrectangle-3-0",divId:"div-gpt-ad-online_ide_com-medrectangle-3-0",adUnitId:"/1254144,22108676293/online_ide_com-medrectangle-3",adUnitIndex:"3",mediaTypes:{banner:{sizes:[[728,90]]}}},{code:"div-gpt-ad-online_ide_com-medrectangle-4-0",divId:"div-gpt-ad-online_ide_com-medrectangle-4-0",adUnitId:"/1254144,22108676293/online_ide_com-medrectangle-4",adUnitIndex:"4",mediaTypes:{banner:{sizes:[[336,280],[300,250]]}}},{code:"div-gpt-ad-online_ide_com-medrectangle-1-0",divId:"div-gpt-ad-online_ide_com-medrectangle-1-0",adUnitId:"/1254144,22108676293/online_ide_com-medrectangle-1",adUnitIndex:"5",mediaTypes:{banner:{sizes:[[300,250]]}}},{code:"div-gpt-ad-online_ide_com-medrectangle-1-0_1",divId:"div-gpt-ad-online_ide_com-medrectangle-1-0_1",adUnitId:"/1254144,22108676293/online_ide_com-medrectangle-1",adUnitIndex:"6",mediaTypes:{banner:{sizes:[[300,250]]}}},{code:"div-gpt-ad-online_ide_com-medrectangle-1-0_2",divId:"div-gpt-ad-online_ide_com-medrectangle-1-0_2",adUnitId:"/1254144,22108676293/online_ide_com-medrectangle-1",adUnitIndex:"7",mediaTypes:{banner:{sizes:[[300,250]]}}}]],false,['pubmaticOpenwrapJS'],true,true,true,true);var PWT={};var owpbjs=owpbjs||{};owpbjs.que=owpbjs.que||[];PWT.HookForPrebidSetConfig=function(config){var schain_domain="ezoic.ai";var dom="";if(typeof __ez_nid!="undefined"&&__ez_nid==21732118914){schain_domain="ezoic.co.uk";}
+         if(typeof location.host!="undefined"){dom=location.host;}
+         config.schain={validation:"strict",config:{ver:"1.0",complete:1,nodes:[{asi:schain_domain,sid:__sellerid,domain:dom,hp:1,}],},};};function openwrapRequestAdUnits(pwtConf){if(typeof __ezPwtBidders!='undefined'){PWT.HookForPrebidRequestBids=function(adUnits){for(var au_i in adUnits){var toRemove=[];for(var bid_i in adUnits[au_i].bids){if(!__ezPwtBidders.includes(adUnits[au_i].bids[bid_i].bidder)){toRemove.push(bid_i);}}
+         for(var remove_i in toRemove.reverse()){adUnits[au_i].bids.splice(toRemove[remove_i],1);}}};}
+         window.PWT.requestBids(pwtConf,openwrapBidsBackHandler);}
+         function openwrapRefreshSlot(slot){var conf=PWT.generateConfForGPT([slot]);openwrapRequestAdUnits(conf);}
+         function openwrapBidsBackHandler(response){if(typeof window.ezosetowbids=="function"){window.ezosetowbids(response);}else{window.ezosetowbidsInterval=setInterval(function(response){if(typeof window.ezosetowbids=='function'){window.ezosetowbids(response);}},150,response);}}
+         owpbjs.que.push(function(){owpbjs.onEvent('adRenderSucceeded',function(e){var slot=getSlotForhb(e.bid.adUnitCode);var ic=slot.getTargeting('ic')[0];if(typeof ic!=='undefined'){var ic_int=parseInt(ic);if(!isNaN(ic_int)){__ez.pel.Add(slot,[(new __ezDotData('refresh_count',ic_int))]);}}
+         var ebbr=slot.getTargeting('eb_br')[0];if(typeof ebbr!='undefined'){__ez.pel.Add(slot,[(new __ezDotData('filled_bid_hash',ebbr))]);}
+         var last_bid_val=0;if(typeof slot.getTargeting("lb")[0]!="undefined"){last_bid_val=parseInt(slot.getTargeting("lb")[0])/100000.0;}
+         var ssid=0;var ssidMap={"amx":11290,"ix":10082,"medianet":11307,"nobid":11319,"onetag":11291,"pubmatic":10061};if(typeof ssidMap[e.bid.bidder.toLowerCase()]!=="undefined"){ssid=ssidMap[e.bid.bidder.toLowerCase()];__ez.pel.Add(slot,[(new __ezDotData("stat_source_id",ssid))],e.bid.cpm/1000,0,e.bid.cpm/1000,last_bid_val,ssid);}
+         var media_type=slot.getTargeting("hb_format");var prebid_source=slot.getTargeting("hb_rt");if(typeof media_type!==undefined&&media_type.length>0&&String(media_type[0])!==""){var media_type_str=String(media_type[0]);__ez.pel.Add(slot,[(new __ezDotData("media_type",media_type_str))]);}
+         if(typeof prebid_source!==undefined&&prebid_source.length>0&&String(prebid_source[0])!==""){var prebid_source_str=String(prebid_source[0]);__ez.pel.Add(slot,[(new __ezDotData("prebid_source",prebid_source_str))]);}
+         __ez.pel.Add(slot,[(new __ezDotData("loaded",1))],e.bid.cpm/1000,0,e.bid.cpm/1000,last_bid_val,ssid);__ez.pel.Fire();});});function getSlotForhb(adUnit){for(slot in window.ezslots){if(window[window.ezslots[slot]].getSlotElementId()==adUnit){return window[window.ezslots[slot]];}}}
+      </script><script>function __ez_fad_ezpbinit(){var s=document.createElement('script');s.setAttribute('src','//go.ezodn.com/hb/dall.js?cb=195-0-56');s.onerror=function(){window.ezDallErr=true};document.body.appendChild(s);}__ez.queue.addFile('/detroitchicago/kenai.js','/detroitchicago/kenai.js?gcb=0&cb=6',false,[],true,false,true,false);var ezjsps=function(obj){return JSON.parse(JSON.stringify(obj));};var epbjs=epbjs||{};epbjs.que=epbjs.que||[];epbjs.bidderTimeout=2000;epbjs.useAdj=true;epbjs.SS={"criteo":10050,"medianet":11307,"onetag":11291,"openx":10015,"pubmatic":10061,"pulsepoint":11301,"sharethrough":11309,"vidoomy":11331,"yahoossp":11318,"yieldmo":11315};epbjs.bidders=['criteo','medianet','onetag','openx','pubmatic','pulsepoint','sharethrough','vidoomy','yahoossp','yieldmo'];epbjs.que.push(function(){});epbjs.bidderSettings={};epbjs.gadj=1.000000;var __enableAnalytics=false;epbjs.testFeatures=[''];var __s2sbidders=[];var __s2sinstreambidders=[];var __allBidders=['yahoossp','sharethrough','onetag','yieldmo','pulsepoint','medianet','vidoomy','openx','criteo','pubmatic'];__ez.queue.addFile('/detroitchicago/portland.js','/detroitchicago/portland.js?gcb=0&cb=3',true,[],true,false,true,false);__ez.queue.addFunc("epbjsRequestAdUnits","epbjsRequestAdUnits",[[{code:'div-gpt-ad-online_ide_com-medrectangle-2-0',mediaTypes:{banner:{sizes:[[728,90]]}},bids:[{bidder:'sharethrough',params:{pkey:'e1sI5HKO9lbvTm6UAa1WEpg9'}}]},{code:'div-gpt-ad-online_ide_com-box-3-0',mediaTypes:{banner:{sizes:[[160,600]]}},bids:[{bidder:'sharethrough',params:{pkey:'gY2AkJfeFq2mznzv9VGyKt5V'}}]},{code:'div-gpt-ad-online_ide_com-box-2-0',mediaTypes:{banner:{sizes:[[160,600]]}},bids:[{bidder:'sharethrough',params:{pkey:'gY2AkJfeFq2mznzv9VGyKt5V'}}]},{code:'div-gpt-ad-online_ide_com-medrectangle-3-0',mediaTypes:{banner:{sizes:[[728,90]]}},bids:[{bidder:'sharethrough',params:{pkey:'e1sI5HKO9lbvTm6UAa1WEpg9'}}]},{code:'div-gpt-ad-online_ide_com-medrectangle-4-0',mediaTypes:{banner:{sizes:[[336,280],[300,250]]}},bids:[{bidder:'sharethrough',params:{pkey:'Vqh9A2nu0ACUssgx5gyWaEde'}}]},{code:'div-gpt-ad-online_ide_com-medrectangle-1-0',mediaTypes:{banner:{sizes:[[300,250]]}},bids:[{bidder:'sharethrough',params:{pkey:'ZuLKhEvL3Xpyu8vcJZvy4GGZ'}}],sizeMapping:[{minWidth:300,sizes:[[300,250]]}]},{code:'div-gpt-ad-online_ide_com-medrectangle-1-0_1',mediaTypes:{banner:{sizes:[[300,250]]}},bids:[{bidder:'sharethrough',params:{pkey:'ZuLKhEvL3Xpyu8vcJZvy4GGZ'}}],sizeMapping:[{minWidth:300,sizes:[[300,250]]}]},{code:'div-gpt-ad-online_ide_com-medrectangle-1-0_2',mediaTypes:{banner:{sizes:[[300,250]]}},bids:[{bidder:'sharethrough',params:{pkey:'ZuLKhEvL3Xpyu8vcJZvy4GGZ'}}],sizeMapping:[{minWidth:300,sizes:[[300,250]]}]}]],false,['/detroitchicago/portland.js'],true,true,true,true);var ez__id5pd='MTE9MjQwNSUzQTIwMSUzQWMwMjQlM0E2MTA1JTNBZmQzNCUzQTdkZjklM0EzZGU5JTNBYjNmZiYxMj1Nb3ppbGxhJTJGNS4wKyUyOFdpbmRvd3MrTlQrMTAuMCUzQitXaW42NCUzQit4NjQlM0IrcnYlM0ExMDkuMCUyOStHZWNrbyUyRjIwMTAwMTAxK0ZpcmVmb3glMkYxMTMuMA==';var ez__uIdHash='20e3dfc42e1837e7a9b03119064ed959b634711d7986845359d25b903d68e1bf';var ez__sspDomain='www.online-ide.com';</script><script src="/detroitchicago/augusta.js?cb=24" async data-ezscrex=false></script><script async data-ezscrex=false>__ez.fads.cmd.push(function(){__ez.fads.__ez_fad_load(0,0);__ez.fads.__ez_fad_scrollmon();});</script><script>setTimeout(function(){let cookieTest=getCookie("ezvignetteviewed");if(cookieTest==""){window.googletag=window.googletag||{};googletag.cmd=googletag.cmd||[];googletag.cmd.push(function(){if(ezslot_interstitial==null){return;}
+         googletag.display(ezslot_interstitial);googletag.pubads().refresh([ezslot_interstitial]);});}},1000);function getCookie(cname){let name=cname+"=";let ca=document.cookie.split(';');for(let i=0;i<ca.length;i++){let c=ca[i];while(c.charAt(0)==' '){c=c.substring(1);}
+         if(c.indexOf(name)==0){return c.substring(name.length,c.length);}}
+         return "";}
+      </script><script data-cfasync=false>!function(){var e=function(e,t){for(var r=0;r<t.length;r++){var n=t[r];if(0==n.complete||void 0!==n.readyState&&n.readyState<4){var o=n.getAttribute("src")||n.currentSrc;void 0!==n.readyState&&0==n.readyState?n.addEventListener("loadstart",(function(e){var t=e.currentTarget.getAttribute("src")||e.currentSrc;window.ezorqs(e,t)})):(o=n.getAttribute("src")||n.currentSrc,window.ezorqs(n,o)),n.addEventListener("load",(function(e){var t=e.currentTarget.getAttribute("src")||e.srcElement.currentSrc;window.ezorqe(e,t)})),n.addEventListener("loadeddata",(function(e){var t=e.currentTarget.getAttribute("src")||e.srcElement.currentSrc;window.ezorqe(e,t)})),n.addEventListener("error",(function(e){var t=e.currentTarget.getAttribute("src")||e.srcElement.currentSrc;window.ezorqe(e,t)}))}}};function t(e){for(var t=0;t<document.styleSheets.length;t++)if(document.styleSheets[t].href==e)return!0;return!1}__ez_addAllListeners=function(){e(0,document.querySelectorAll("img")),e(0,document.querySelectorAll("video")),e(0,document.querySelectorAll("audio")),function(e){for(var r=0;r<e.length;r++){var n=e[r];if(("preload"==n.getAttribute("rel")||"stylesheet"==n.getAttribute("rel"))&&null!=n.getAttribute("href")&&t(n.getAttribute("href"))){window.ezorqs(n,n.getAttribute("href"));var o=document.createElement("img");o.onerror=function(e){void 0!==e.path&&void 0!==e.path[0].currentSrc?window.ezorqe(n,e.path[0].currentSrc):void 0!==e.srcElement&&void 0!==e.srcElement.href&&window.ezorqe(n,e.srcElement.href)},o.src=n.getAttribute("href")}}}(document.querySelectorAll("link")),void 0!==window.__ez.ssaf&&window.__ez.ssaf.indexOf(16)>-1&&void 0!==window.__ez.sshsdef&&!1===window.__ez.sshsdef&&Element.prototype.addEventListener&&("function"==typeof window.onload&&(window.addEventListener("load",window.onload),window.onload=null),"function"==typeof document.onload&&(document.addEventListener.addEventListener("load",document.onload),document.onload=null))},__ez.queue.addFunc("__ez_addAllListeners","__ez_addAllListeners",null,!1,["/detroitchicago/tulsa.js"],!0,!0,!0,!0)}();</script><script style=display:none>var __ez_dims=(function(){var setCookie=function(name,content,expiry){return document.cookie=name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';};var ffid=1;var oh=window.screen.height;var ow=window.screen.width;var h=ffid===1?oh:(oh>ow)?oh:ow;var w=ffid===1?ow:(oh>ow)?ow:oh;var uh=window.innerHeight||document.documentElement.clientHeight||document.getElementsByTagName('body')[0].clientHeight;var uw=window.innerWidth||document.documentElement.clientWidth||document.getElementsByTagName('body')[0].clientWidth;setCookie('ezds',encodeURIComponent('ffid='+ffid+',w='+w+',h='+h),(31536e3*7));setCookie('ezohw',encodeURIComponent('w='+uw+',h='+uh),(31536e3*7));})();</script><script style=display:none async></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7caeb166ac3b5fac","version":"2023.4.0","r":1,"token":"e34155c573c640f688feb0eb6709ee19","si":100}' crossorigin="anonymous"></script>
+ </body>
+      </html>
